@@ -1,0 +1,186 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI, sans-serif;
+}
+
+body{
+  background:black;
+  color:white;
+}
+
+.hidden{display:none}
+
+/* LOGIN */
+#login{
+  height:100vh;
+  background:url("biet-campus.jpg") center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+
+#login::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+  backdrop-filter:blur(6px);
+}
+
+#login *{z-index:2}
+
+.login-card{
+  width:320px;
+  background:rgba(0,0,0,0.65);
+  padding:35px 30px;
+  border-radius:30px;
+  box-shadow:0 0 30px cyan;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.logo{width:100px;margin-bottom:10px}
+
+.login-card h1{color:cyan}
+
+.subtitle{
+  font-size:13px;
+  color:#ccc;
+  margin-bottom:20px;
+}
+
+.login-card input{
+  width:100%;
+  padding:14px;
+  margin:8px 0;
+  border-radius:50px;
+  border:none;
+  outline:none;
+  text-align:center;
+}
+
+.login-card button{
+  width:100%;
+  padding:14px;
+  margin-top:15px;
+  border:none;
+  border-radius:50px;
+  background:linear-gradient(135deg,cyan,#00b3b3);
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.note{
+  font-size:12px;
+  color:#aaa;
+  margin-top:15px;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+  background:#111;
+}
+
+.logout{
+  background:red;
+  color:white;
+  border:none;
+  padding:8px 15px;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+/* INTRO */
+#intro{
+  text-align:center;
+  padding:30px;
+}
+
+.intro-img{
+  width:80%;
+  border-radius:20px;
+  box-shadow:0 0 20px cyan;
+}
+
+.intro-text{
+  max-width:800px;
+  margin:20px auto;
+  text-align:left;
+  line-height:1.6;
+  background:rgba(0,0,0,0.6);
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 0 15px cyan;
+}
+
+#intro button{
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  background:cyan;
+  cursor:pointer;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin:20px;
+}
+
+nav button{
+  padding:10px 25px;
+  border:none;
+  border-radius:25px;
+  background:cyan;
+  cursor:pointer;
+}
+
+/* TABS */
+.tab{
+  text-align:center;
+  padding:20px;
+}
+
+.tab input{
+  padding:12px;
+  margin:8px;
+  border-radius:25px;
+  border:none;
+}
+
+.tab button{
+  padding:10px 20px;
+  border-radius:25px;
+  border:none;
+  background:cyan;
+  cursor:pointer;
+}
+
+/* CARDS */
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.card{
+  background:#111;
+  margin:12px;
+  padding:15px;
+  border-radius:20px;
+  box-shadow:0 0 15px cyan;
+}
+
+.card img{
+  width:180px;
+  border-radius:15px;
+}

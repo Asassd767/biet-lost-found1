@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BIET Lost & Found</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<section id="login">
+  <div class="login-card">
+    <img src="biet-logo.png" class="logo">
+    <h1>BIET Lost & Found</h1>
+    <p class="subtitle">Official Campus Portal</p>
+
+    <input type="text" placeholder="Student Full Name">
+    <input type="email" placeholder="College Email ID">
+    <input type="text" placeholder="Branch / Year">
+    <input type="password" id="pwd" placeholder="College Access Password">
+
+    <button onclick="login()">ENTER PORTAL</button>
+    <p class="note">Authorized BIET Students Only</p>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="hidden">
+
+<header>
+  <h2>BIET Campus Lost & Found System</h2>
+  <button class="logout" onclick="logout()">Logout</button>
+</header>
+
+<!-- INTRO PAGE -->
+<section id="intro">
+  <img src="biet-campus.jpg" class="intro-img">
+
+  <div class="intro-text">
+    <p>• This portal helps BIET students recover lost belongings inside campus.</p>
+    <p>• Students can report lost items with image and contact details.</p>
+    <p>• Anyone who finds an item can upload it in the Found section.</p>
+    <p>• Owners can identify their item and contact the finder directly.</p>
+    <p>• This avoids crowding notice boards and saves time.</p>
+    <p>• Return confirmation ensures transparency and responsibility.</p>
+    <p>• Only BIET students are allowed to access this system.</p>
+    <p>• This improves campus trust, safety and cooperation.</p>
+  </div>
+
+  <button onclick="startApp()">Next</button>
+</section>
+
+<!-- MAIN APP -->
+<section id="app" class="hidden">
+
+<nav>
+  <button onclick="showTab('lost')">Lost Items</button>
+  <button onclick="showTab('found')">Found Items</button>
+</nav>
+
+<!-- LOST TAB -->
+<div id="lost" class="tab">
+  <h2>Recently Lost Items</h2>
+
+  <!-- SAMPLE LOST ITEM -->
+  <div class="card">
+    <img src="https://i.imgur.com/4YQZ6bJ.jpg">
+    <h3>Black Backpack</h3>
+    <p>Lost near Library</p>
+    <p>Contact: 98XXXXXX21</p>
+  </div>
+
+  <h3>Report New Lost Item</h3>
+  <input id="lostName" placeholder="Item Name">
+  <input id="lostContact" placeholder="Your Contact Number">
+  <input type="file" id="lostImg">
+  <button onclick="addLost()">Submit Lost Item</button>
+
+  <div id="lostList" class="cards"></div>
+</div>
+
+<!-- FOUND TAB -->
+<div id="found" class="tab hidden">
+  <h2>Report Found Item</h2>
+
+  <input id="foundName" placeholder="Item Name">
+  <input id="foundContact" placeholder="Your Contact Number">
+  <input type="file" id="foundImg">
+  <button onclick="addFound()">Submit Found Item</button>
+
+  <div id="foundList" class="cards"></div>
+</div>
+
+</section>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
